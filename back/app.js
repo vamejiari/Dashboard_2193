@@ -12,7 +12,12 @@ const app=express()
 //CONFIGURACION CORS
 app.use(cors())
 app.use(express.json())
+
+//RUTA DEPARTAMENTO
 app.use('/departamentos', RoutesDepartamento)
+
+//RUTA MUNICIPIO
+
 
 //DEFINIR CONEXION A LA BASE DE DATOS
 try {
@@ -22,10 +27,7 @@ try {
     console.log(`El error de conexion es: ${error}`)
 }
 
-/*app.get('/',(req, res)=>{
-    res.send('Hola mundo')
-})*/
-
+//SERVIDOR
 app.listen(5500,()=>{
     console.log('Servidor levantado y funcionando en el puerto http://localhost:5500/')
 })
