@@ -4,7 +4,7 @@ import db from "../database/db.js";
 //IMPORTAR SEQUELIZE
 import { DataTypes } from "sequelize";
 
-//DEFINIR CONEXION A LA BASE DE DATOS
+//CONSTRUCCION DEL MODELO Y CONEXION A LA TABLA
 const DepartamentoModel=db.define('departamentos',{
     Id_Departamento: {
         type: DataTypes.STRING, 
