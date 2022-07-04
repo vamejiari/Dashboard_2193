@@ -12,8 +12,6 @@ const HospitalModel=db.define('hospitales',{
         type:DataTypes.STRING
     }, Nombre:{
         type: DataTypes.STRING
-    }, Logo:{
-        type:DataTypes.BLOB
     }, Id_Nivel:{
         type: DataTypes.STRING
     }, Id_Departamento:{

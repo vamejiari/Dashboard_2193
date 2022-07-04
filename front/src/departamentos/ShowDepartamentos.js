@@ -1,0 +1,61 @@
+import axios from 'axios'
+import {useState, useEffect} from 'react'
+ import {Link} from 'react-router-dom'
+
+ const URI='http://localhost:5500/Departamentos/'
+
+ const CompShowDepartamentos=()=>{
+    //CONFIGURAR HOOKS
+    const [Departamentos, setDepartamentos]=useState([])
+    useEffect(()=>{
+        getDepartamentos()
+    },[])
+
+    //PROCEDIMIENTO PARA MOSTRAR TODOS LOS DEPARTAMENTOS
+    const getDepartamentos=async()=>{
+        //CREAR PETICION CON AXIOS
+        const res=await axios.get(URI)
+        setDepartamentos(res.data)
+    }
+
+    //PROCEDIMIENTO PARA ELIMINAR UN DEPARTAMENTO
+    const deleteDepartamento=async(Id_Departamento)=>{
+        //CREAR PETICION CON AXIOS
+        await axios.delete(`${URI}${Id_Departamento}`)
+        getDepartamentos()
+    }
+
+    //DEVOLVER VISTA
+    return (
+        <div className='container'>
+            <div className='row'>
+                <div className='col'>
+                    <Link to="/Departamentos/create" className='btn btn-primary mt-2 mb-2'>Crear Departamento</Link>
+                    <table className="table table-striped">
+                        <thead className='table-primary'>
+                            <tr>
+                                <th>Id Departamento</th>
+                                <th>Nombre Departamento</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {Departamentos.map ((departamento)=>(
+                                <tr key={departamento.Id_Departamento}> 
+                                    <td>{departamento.Id_Departamento}</td>
+                                    <td>{departamento.Nombre_Departamento}</td>
+                                    <td>
+                                        <Link to={`/Departamentos/edit/${departamento.Id_Departamento}`} className='btn btn-info'><i className="fa-solid fa-pen-to-square"></i></Link>
+                                        <button onClick={()=>deleteDepartamento(departamento.Id_Departamento)} className='btn btn-danger'><i className="fa-regular fa-trash-can"></i></button>
+                                    </td>
+                                </tr>
+                            ))} 
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    )
+ }
+
+ export default CompShowDepartamentos
