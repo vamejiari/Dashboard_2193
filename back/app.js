@@ -30,6 +30,7 @@ import RoutesConsolidadoIndicadorCalidad from './routes/RoutesConsolidadoIndicad
 import RoutesConsolidadoCalidad from './routes/RoutesConsolidadoCalidad.js'
 import RoutesRegistroIndicadorCalidad from './routes/RoutesRegistroIndicadorCalidad.js'
 import RoutesRegistroCalidad from './routes/RoutesRegistroCalidad.js'
+import RouteLogin from './routes/RouteLogin.js'
 
 const app=express()
 
@@ -62,6 +63,8 @@ app.use('/Consolidados_Indicadores_Calidad', RoutesConsolidadoIndicadorCalidad)
 app.use('/Consolidados_Calidad', RoutesConsolidadoCalidad)
 app.use('/Registros_Indicadores_Calidad', RoutesRegistroIndicadorCalidad)
 app.use('/Registros_Calidad', RoutesRegistroCalidad)
+app.use('/Login', RouteLogin)
+
 
 //DEFINIR CONEXION A LA BASE DE DATOS
 try {

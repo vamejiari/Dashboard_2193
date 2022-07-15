@@ -82,15 +82,6 @@ const CompEditUsuario=()=>{
                     />
                 </div>
                 <div className="mt-2 mb-2">
-                    <label className="form-label">Contraseña</label>
-                    <input
-                        value={Contrasena}
-                        onChange={(e)=>setContrasena(e.target.value)}
-                        type="text"
-                        className="form-control"
-                    />
-                </div>
-                <div className="mt-2 mb-2">
                     <label className="form-label">Id Área</label>
                     <input
                         value={Id_Area}

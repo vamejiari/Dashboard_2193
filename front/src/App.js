@@ -98,6 +98,9 @@ import CompEditRegistroProduccion from './registros_produccion/EditRegistroProdu
 import CompShowConsolidadosProduccion from './consolidados_produccion/ShowConsolidadosProduccion';
 import CompCreateConsolidadoProduccion from './consolidados_produccion/CreateConsolidadoProduccion';
 import CompEditConsolidadoProduccion from './consolidados_produccion/EditConsolidadoProduccion';
+import Login from './views/Login';
+
+
 
 function App() {
   return (
@@ -204,6 +207,9 @@ function App() {
           <Route path='/Consolidados_Produccion' element={<CompShowConsolidadosProduccion/>}/>
           <Route path='/Consolidados_Produccion/create' element={<CompCreateConsolidadoProduccion/>}/>
           <Route path='/Consolidados_Produccion/edit/:Codigo_Habilitacion/:Id_Variable_Produccion/:Id_Vigencia' element={<CompEditConsolidadoProduccion/>}/>
+        
+          <Route path='/Login' element={<Login/>}/>
+
         </Routes>
       </BrowserRouter>
     </div>
