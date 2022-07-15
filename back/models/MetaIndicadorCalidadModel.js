@@ -8,7 +8,7 @@ export const MetaIndicadorCalidadModel=db.define('meta_calidad_indicadores',{
         type:DataTypes.STRING,
         primaryKey: true
     }, Tipo_Meta:{
-        type:DataTypes.ENUM('Numerador','Denominador')
+        type:DataTypes.ENUM('Tasa','Porcentaje')
     }, Valor:{
         type:DataTypes.FLOAT
     }, Id_Indicador:{

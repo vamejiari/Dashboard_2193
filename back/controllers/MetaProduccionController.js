@@ -18,7 +18,9 @@ export const getMetaProduccion=async(req, res)=>{
     try {
         const metaProduccion=await MetaProduccionModel.findAll({
             where:{
-                Codigo_Habilitacion: req.params.Codigo_Habilitacion
+                Codigo_Habilitacion: req.params.Codigo_Habilitacion,
+                Id_Variable_Produccion:req.params.Id_Variable_Produccion,
+                Anio:req.params.Anio
             }
         })
         res.json(metaProduccion)
@@ -45,7 +47,8 @@ export const updateMetaProduccion=async(req,res)=>{
         await MetaProduccionModel.update(req.body,{
             where:{
                 Codigo_Habilitacion: req.params.Codigo_Habilitacion,
-                Id_Variable_Produccion: req.params.Id_Variable_Produccion
+                Id_Variable_Produccion: req.params.Id_Variable_Produccion,
+                Anio:req.params.Anio
             }
         })
         res.json({
@@ -62,7 +65,8 @@ export const deleteMetaProduccion=async(req,res)=>{
         await MetaProduccionModel.destroy({
             where:{
                 Codigo_Habilitacion:req.params.Codigo_Habilitacion, 
-                Id_Variable_Produccion:req.params.Id_Variable_Produccion
+                Id_Variable_Produccion:req.params.Id_Variable_Produccion,
+                Anio:req.params.Anio
             }
         })
         res.json({

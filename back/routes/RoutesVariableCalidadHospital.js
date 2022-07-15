@@ -6,15 +6,15 @@ const router=express.Router()
 router.get('/', getVariablesCalidadHospital)
 
 //MOSTRAR LAS VARIABLES REGISTRADAS UNA ENTIDAD
-router.get('/:Codigo_Habilitacion', getVariableCalidadHospital)
+router.get('/:Id_Variable_Calidad/:Codigo_Habilitacion/:Id_Area', getVariableCalidadHospital)
 
 //CREAR UNA VARIABLE EN UNA ENTIDAD
 router.post('', createVariableCalidadHospital)
 
 //ACTUALIZAR UNA VARIABLE DE UNA ENTIDAD
-router.put('/:Codigo_Habilitacion/:Id_Variable_Calidad', updateVariableCalidadHospital)
+router.put('/:Id_Variable_Calidad/:Codigo_Habilitacion/:Id_Area', updateVariableCalidadHospital)
 
 //ELIMINAR UNA VARIABLE DE UNA ENTIDAD
-router.delete('/:Codigo_Habilitacion/:Id_Variable_Calidad', deleteVariableCalidadHospital)
+router.delete('/:Id_Variable_Calidad/:Codigo_Habilitacion/:Id_Area', deleteVariableCalidadHospital)
 
 export default router

@@ -18,7 +18,9 @@ export const getConsolidadoCalidad=async(req,res)=>{
     try {
         const consolidado=await ConsolidadoCalidadModel.findAll({
             where:{
-                Codigo_Habilitacion: req.params.Codigo_Habilitacion
+                Codigo_Habilitacion: req.params.Codigo_Habilitacion,
+                Id_Variable_Calidad: req.params.Id_Variable_Calidad,
+                Id_Vigencia: req.params.Id_Vigencia
             }
         })
         res.json(consolidado)

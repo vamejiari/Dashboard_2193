@@ -6,7 +6,7 @@ const router=express.Router()
 router.get('/', getRegistrosIndicadorCalidad)
 
 //MOSTRAR LOS REGISTROS DE UNA ENTIDAD
-router.get('/:Codigo_Habilitacion', getRegistroIndicadorCalidad)
+router.get('/:Codigo_Habilitacion/:Id_Indicador/:Id_Periodo', getRegistroIndicadorCalidad)
 
 //CREAR UN REGISTRO
 router.post('/', createRegistroIndicadorCalidad)

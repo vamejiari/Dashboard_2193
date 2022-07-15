@@ -18,8 +18,7 @@ export const getNovedad=async(req,res)=>{
     try {
         const novedad=await NovedadModel.findAll({
             where:{
-                Codigo_Habilitacion: req.params.Codigo_Habilitacion,
-                Id_Periodo: req.params.Id_Periodo
+                Id_Novedad:req.params.Id_Novedad
             }
         })
         res.json(novedad)
@@ -45,7 +44,7 @@ export const updateNovedad=async(req,res)=>{
     try {
         await NovedadModel.update(req.body,{
             where:{
-                Id_Novedad: req.params.Id_Novedad
+                Id_Novedad:req.params.Id_Novedad
             }
         })
         res.json({
@@ -61,7 +60,7 @@ export const deleteNovedad=async(req,res)=>{
     try {
         await NovedadModel.destroy({
             where:{
-                Id_Novedad: req.params.Id_Novedad
+                Id_Novedad:req.params.Id_Novedad
             }
         })
         res.json({

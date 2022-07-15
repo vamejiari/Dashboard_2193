@@ -6,7 +6,7 @@ const router=express.Router()
 router.get('/', getNovedades)
 
 //MOSTRAR LAS NOVEDADES DE UNA ENTIDAD DE UN PERIODO
-router.get('/:Codigo_Habilitacion/Id_Periodo', getNovedad)
+router.get('/:Id_Novedad', getNovedad)
 
 //CREAR UNA NOVEDAD
 router.post('/', createNovedad)

@@ -11,7 +11,7 @@ const VigenciaModel=db.define('vigencias',{
     }, Trimestre:{
         type:DataTypes.INTEGER
     }, Anio:{
-        type: DataTypes.STRING
+        type: DataTypes.INTEGER
     }
 })
 

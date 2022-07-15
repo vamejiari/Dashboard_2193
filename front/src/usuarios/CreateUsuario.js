@@ -99,7 +99,7 @@ const CompCreateUsuario=()=>{
                         className="form-control"
                     />
                 </div>
-                <button type="submit" className="btn btn-success mb-3"><i class="fa-regular fa-square-plus"></i></button>
+                <button type="submit" className="btn btn-success"><i className="fa-regular fa-square-plus"></i></button>
             </form>
         </div>
     ) 

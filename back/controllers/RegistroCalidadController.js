@@ -18,7 +18,9 @@ export const getRegistroCalidad=async(req,res)=>{
     try {
         const registro=await RegistroCalidadModel.findAll({
             where:{
-                Codigo_Habilitacion:req.params.Codigo_Habilitacion
+                Codigo_Habilitacion:req.params.Codigo_Habilitacion,
+                Id_Variable_Calidad:req.params.Id_Variable_Calidad,
+                Id_Periodo:req.params.Id_Periodo
             }
         })
         res.json(registro)

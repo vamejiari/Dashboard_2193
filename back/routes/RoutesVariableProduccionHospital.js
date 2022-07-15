@@ -7,15 +7,15 @@ const router=express.Router()
 router.get('/', getVariablesProduccionHospital)
 
 //MOSTRAR VARIABLES DE UN HOSPITAL
-router.get('/:Codigo_Habilitacion', getVariableProduccionHospital)
+router.get('/:Id_Variable_Produccion/:Codigo_Habilitacion/:Id_Area', getVariableProduccionHospital)
 
 //CREAR UNA VARIABLE EN UN HOSPITAL
 router.post('/', createVariableProduccionHospital)
 
 //ACTUALIZAR LAS VARIABLES DE UN HOSPITAL
-router.put('/:Codigo_Habilitacion', updateVariableProduccionHospital)
+router.put('/:Id_Variable_Produccion/:Codigo_Habilitacion/:Id_Area', updateVariableProduccionHospital)
 
 //ELIMINAR UNA VARIABLE DE UN HOSPITAL
-router.delete('/:Codigo_Habilitacion/:Id_Variable_Produccion', deleteVariableProduccionHospital)
+router.delete('/:Id_Variable_Produccion/:Codigo_Habilitacion/:Id_Area', deleteVariableProduccionHospital)
 
 export default router

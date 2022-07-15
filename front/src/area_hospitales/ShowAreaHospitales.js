@@ -40,7 +40,7 @@ const CompShowAreaHospitales=()=>{
                         </thead>
                         <tbody>
                             {Area_Hospitales.map((area_hospital)=>(
-                                <tr key={area_hospital.Codigo_Habilitacion && area_hospital.Id_Area}>
+                                <tr key={(area_hospital.Id_Area + area_hospital.Codigo_Habilitacion) }>
                                         <td>{area_hospital.Codigo_Habilitacion}</td>
                                         <td>{area_hospital.Id_Area}</td>
                                         <td>

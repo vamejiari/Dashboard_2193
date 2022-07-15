@@ -8,7 +8,7 @@ const MetaProduccionModel=db.define('meta_producciones',{
     Id_Meta:{
         type: DataTypes.STRING,
         primaryKey: true
-    }, Año:{
+    }, Anio:{
         type: DataTypes.INTEGER
     }, Valor_Meta:{
         type:DataTypes.INTEGER

@@ -6,7 +6,7 @@ const router=express.Router()
 router.get('/', getRegistrosCalidad)
 
 //MOSTRAR LOS REGISTROS DE CALIDAD DE UNA ENTIDAD
-router.get('/:Codigo_Habilitacion', getRegistroCalidad)
+router.get('/:Codigo_Habilitacion/:Id_Variable_Calidad/:Id_Periodo', getRegistroCalidad)
 
 //CREAR UN REGISTRO DE CALIDAD
 router.post('/', createRegistroCalidad)

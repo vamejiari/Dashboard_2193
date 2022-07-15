@@ -57,7 +57,7 @@ const CompShowUsuarios=()=>{
                                     <td>{usuario.Codigo_Habilitacion}</td> 
                                     <td>{usuario.Id_Area}</td>
                                     <td>
-                                        <Link to={`/Usuarios/edit/${usuario.Cedula}`} className="btn btn-info"><i class="fa-solid fa-pen-to-square"></i></Link>
+                                        <Link to={`/Usuarios/edit/${usuario.Cedula}`} className="btn btn-info"><i className="fa-solid fa-pen-to-square"></i></Link>
                                         <button onClick={()=>deleteUsuario(usuario.Cedula)} className="btn btn-danger"><i className="fa-regular fa-trash-can"></i></button>
                                     </td>
                                 </tr>

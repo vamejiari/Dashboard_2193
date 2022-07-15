@@ -6,7 +6,7 @@ const router=express.Router()
 router.get('/', getConsolidadosCalidad)
 
 //MOSTRAR LOS CONSOLIDADOS DE UNA ENTIDAD
-router.get('/:Codigo_Habilitacion', getConsolidadoCalidad)
+router.get('/:Codigo_Habilitacion/:Id_Variable_Calidad/:Id_Vigencia', getConsolidadoCalidad)
 
 //CREAR UN CONSOLIDADO
 router.post('/', createConsolidadoCalidad)

@@ -6,7 +6,7 @@ const router=express.Router()
 router.get('/', getConsolidadosIndicadoresCalidad)
 
 //BUSCAR LOS CONSOLIDADOS DE INDICADORES EN UNA ENTIDAD
-router.get('/:Codigo_Habilitacion', getConsolidadoIndicadorCalidad)
+router.get('/:Codigo_Habilitacion/:Id_Indicador/:Id_Vigencia', getConsolidadoIndicadorCalidad)
 
 //CREAR UN CONSOLIDADO DE INDICADOR
 router.post('/', createConsolidadoIndicadorCalidad)

@@ -18,7 +18,9 @@ export const getConsolidadoIndicadorCalidad=async(req,res)=>{
     try {
         const consolidadoIndicador=await ConsolidadoIndicadorCalidadModel.findAll({
             where:{
-                Codigo_Habilitacion:req.params.Codigo_Habilitacion
+                Codigo_Habilitacion:req.params.Codigo_Habilitacion,
+                Id_Indicador:req.params.Id_Indicador,
+                Id_Vigencia: req.params.Id_Vigencia
             }
         })
         res.json(consolidadoIndicador)
@@ -43,9 +45,11 @@ export const createConsolidadoIndicadorCalidad=async(req,res)=>{
 export const updateConsolidadoIndicadorCalidad=async(req,res)=>{
     try {
         await ConsolidadoIndicadorCalidadModel.update(req.body,{
-            Codigo_Habilitacion:req.params.Codigo_Habilitacion,
-            Id_Indicador:req.params.Id_Indicador,
-            Id_Vigencia: req.params.Id_Vigencia
+            where:{
+                Codigo_Habilitacion:req.params.Codigo_Habilitacion,
+                Id_Indicador:req.params.Id_Indicador,
+                Id_Vigencia: req.params.Id_Vigencia
+            } 
         })
         res.json({
             "message":"Registro actualizado correctamente"

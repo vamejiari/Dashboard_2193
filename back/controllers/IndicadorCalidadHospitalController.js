@@ -18,7 +18,8 @@ export const getIndicadoresCalidadHospital=async(req,res)=>{
     try {
         const indicadorCalidad=await IndicadorCalidadHospitalModel.findAll({
             where:{
-                Codigo_Habilitacion: req.params.Codigo_Habilitacion
+                Codigo_Habilitacion: req.params.Codigo_Habilitacion,
+                Id_Indicador:req.params.Id_Indicador
             }
         })
         res.json(indicadorCalidad)

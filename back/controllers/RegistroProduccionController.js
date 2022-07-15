@@ -46,7 +46,9 @@ export const updateRegistro=async(req,res)=>{
     try {
         await RegistroProduccionModel.update(req.body,{
             where:{
-                Id_Registro:req.params.Id_Registro
+                Codigo_Habilitacion: req.params.Codigo_Habilitacion,
+                Id_Variable_Produccion: req.params.Id_Variable_Produccion,
+                Id_Periodo: req.params.Id_Periodo
             }
         })
         res.json({
@@ -62,7 +64,9 @@ export const deleteRegistro=async(req,res)=>{
     try {
         await RegistroProduccionModel.destroy({
             where:{
-                Id_Registro: req.params.Id_Registro
+                Codigo_Habilitacion: req.params.Codigo_Habilitacion,
+                Id_Variable_Produccion: req.params.Id_Variable_Produccion,
+                Id_Periodo: req.params.Id_Periodo
             }
         })
         res.json({

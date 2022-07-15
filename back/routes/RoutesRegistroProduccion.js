@@ -12,9 +12,9 @@ router.get('/:Codigo_Habilitacion/:Id_Variable_Produccion/:Id_Periodo', getRegis
 router.post('/', createRegistro)
 
 //ACTUALIZAR UN REGISTRO
-router.put('/:Id_Registro', updateRegistro)
+router.put('/:Codigo_Habilitacion/:Id_Variable_Produccion/:Id_Periodo', updateRegistro)
 
 //ELIMINAR UN REGISTRO
-router.delete('/:Id_Registro', deleteRegistro)
+router.delete('/:Codigo_Habilitacion/:Id_Variable_Produccion/:Id_Periodo', deleteRegistro)
 
 export default router

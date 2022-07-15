@@ -18,7 +18,8 @@ export const getConsolidadoProduccion=async(req,res)=>{
         const consolidado=await ConsolidadoProduccionModel.findAll({
             where:{
                 Codigo_Habilitacion: req.params.Codigo_Habilitacion,
-                Id_Variable_Produccion: req.params.Id_Variable_Produccion
+                Id_Variable_Produccion: req.params.Id_Variable_Produccion,
+                Id_Vigencia:req.params.Id_Vigencia
             }
         })
         res.json(consolidado)
@@ -44,7 +45,9 @@ export const updateConsolidadoProduccion=async(req,res)=>{
     try {
         await ConsolidadoProduccionModel.update(req.body,{
             where:{
-                Id_Consolidado: req.params.Id_Consolidado
+                Codigo_Habilitacion: req.params.Codigo_Habilitacion,
+                Id_Variable_Produccion: req.params.Id_Variable_Produccion,
+                Id_Vigencia:req.params.Id_Vigencia
             }
         })
         res.json({
@@ -60,7 +63,9 @@ export const deleteConsolidadoProduccion=async(req,res)=>{
     try {
         await ConsolidadoProduccionModel.destroy({
             where:{
-                Id_Consolidado:req.params.Id_Consolidado
+                Codigo_Habilitacion: req.params.Codigo_Habilitacion,
+                Id_Variable_Produccion: req.params.Id_Variable_Produccion,
+                Id_Vigencia:req.params.Id_Vigencia
             }
         })
     } catch (error) {

@@ -99,7 +99,7 @@ const CompEditUsuario=()=>{
                         className="form-control"
                     />
                 </div>
-                <button type="submit" className="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></button>
+                <button type="submit" className="btn btn-primary"><i className="fa-solid fa-pen-to-square"></i></button>
             </form>
         </div>
     )

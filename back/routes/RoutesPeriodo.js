@@ -7,7 +7,7 @@ const router=express.Router()
 router.get('/', getPeriodos)
 
 //MOSTRAR LOS PERIODOS DE UN AÑO
-router.get('/:Anio', getPeriodo)
+router.get('/:Id_Periodo', getPeriodo)
 
 //CREAR UN NUEVO PERIODO
 router.post('/', createPeriodo)

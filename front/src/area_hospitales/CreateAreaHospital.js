@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const URI='http://localhost:5500/Areas_Hospitales'
+const URI='http://localhost:5500/Areas_Hospitales/'
 
 const CompCreateAreaHospital=()=>{
     //CONFIGURAR HOOKS
@@ -39,7 +39,7 @@ const CompCreateAreaHospital=()=>{
                         className="form-control"
                     />
                 </div>
-                <button type="submit" className="btn btn-success"><i class="fa-regular fa-square-plus"></i></button>
+                <button type="submit" className="btn btn-success"><i className="fa-regular fa-square-plus"></i></button>
             </form>
         </div>
     )

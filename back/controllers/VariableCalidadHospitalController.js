@@ -18,7 +18,9 @@ export const getVariableCalidadHospital=async(req,res)=>{
     try {
         const variableCalidad=await VariableCalidadHospitalModel.findAll({
             where:{
-                Codigo_Habilitacion:req.params.Codigo_Habilitacion
+                Id_Variable_Calidad:req.params.Id_Variable_Calidad,
+                Codigo_Habilitacion:req.params.Codigo_Habilitacion,
+                Id_Area:req.params.Id_Area
             }
         })
         res.json(variableCalidad)
@@ -44,8 +46,9 @@ export const updateVariableCalidadHospital=async(req,res)=>{
     try {
         await VariableCalidadHospitalModel.update(req.body,{
             where:{
-                Codigo_Habilitacion: req.params.Codigo_Habilitacion,
-                Id_Variable_Calidad: req.params.Id_Variable_Calidad
+                Id_Variable_Calidad:req.params.Id_Variable_Calidad,
+                Codigo_Habilitacion:req.params.Codigo_Habilitacion,
+                Id_Area:req.params.Id_Area
             }
         })
         res.json({
@@ -61,8 +64,9 @@ export const deleteVariableCalidadHospital=async(req,res)=>{
     try {
         await VariableCalidadHospitalModel.destroy({
             where:{
+                Id_Variable_Calidad:req.params.Id_Variable_Calidad,
                 Codigo_Habilitacion:req.params.Codigo_Habilitacion,
-                Id_Variable_Calidad: req.params.Id_Variable_Calidad
+                Id_Area:req.params.Id_Area
             }
         })
         res.json({

@@ -18,7 +18,7 @@ export const getPeriodo=async(req,res)=>{
     try {
         const periodo=await PeriodoModel.findAll({
             where:{
-                Anio:req.params.Anio
+                Id_Periodo:req.params.Id_Periodo
             }
         })
         res.json(periodo)

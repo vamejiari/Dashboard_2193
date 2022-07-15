@@ -6,15 +6,15 @@ const router=express.Router()
 router.get('/', getConsolidadosProduccion)
 
 //MOSTRAR LOS CONSOLIDADOS DE UNA VARIABLE REGISTRADA EN UNA ENTIDAD
-router.get('/:Codigo_Habilitacion/:Id_Variable_Produccion',getConsolidadoProduccion)
+router.get('/:Codigo_Habilitacion/:Id_Variable_Produccion/:Id_Vigencia',getConsolidadoProduccion)
 
 //CREAR UN CONSOLIDADO
 router.post('/', createConsolidadoProduccion)
 
 //ACTUALIZAR UN CONSOLIDADO
-router.put('/:Id_Consolidado', updateConsolidadoProduccion)
+router.put('/:Codigo_Habilitacion/:Id_Variable_Produccion/:Id_Vigencia', updateConsolidadoProduccion)
 
 //ELIMINAR UN CONSOLIDADO
-router.delete('/:Id_Consolidado', deleteConsolidadoProduccion)
+router.delete('/:Codigo_Habilitacion/:Id_Variable_Produccion/:Id_Vigencia', deleteConsolidadoProduccion)
 
 export default router
