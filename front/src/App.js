@@ -105,9 +105,6 @@ import Login from './views/Login';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App" alt="logo" />
-      </header>
       <BrowserRouter>
         <Routes>
           {/*CADA RUTA QUE SE UTILIZARA CUANDO SE DEFINA EL ENRUTADOR*/}
