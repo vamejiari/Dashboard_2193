@@ -68,6 +68,9 @@ export const deleteConsolidadoProduccion=async(req,res)=>{
                 Id_Vigencia:req.params.Id_Vigencia
             }
         })
+        res.json({
+            "message":"Registro eliminado correctamente"
+        })
     } catch (error) {
         res.json({message: `Existe un error`})
     }

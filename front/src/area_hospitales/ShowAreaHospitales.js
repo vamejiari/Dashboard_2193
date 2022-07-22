@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Hospital from '../resources/Hospital.png'
 
 const URI='http://localhost:5500/Areas_Hospitales/'
 
@@ -26,20 +27,25 @@ const CompShowAreaHospitales=()=>{
     }
 
     return(
-        <div className="container">
-            <div className="row">
-                <div className="col">
-                    <Link to='/Areas_Hospitales/create' className="btn btn-primary">Crear Área Hospital</Link>
-                    <table className="table table-striped">
-                        <thead className="table-primary">
-                            <tr>
-                                <th>Codigo Habilitacion</th>
-                                <th>Id Área</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {Area_Hospitales.map((area_hospital)=>(
+        <div className="container register mb-5">
+            <div className="row abs-center">
+                <div className="col-md-4 abs-center">
+                    <img src={Hospital} className="btn" alt="Hospital" width={350}/>
+                </div>
+                <div className="col-md-8">
+                    <div className='container'>
+                        <div className='row abs-center'>
+                            <div className='col'>
+                                <table className="table table-responsive-lg table-bordered table-light  mt-3" >
+                                    <thead className='table table-primary'>
+                                        <tr>
+                                            <th>Codigo Habilitacion</th>
+                                            <th>Id Área</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {Area_Hospitales.map((area_hospital)=>(
                                 <tr key={(area_hospital.Id_Area + area_hospital.Codigo_Habilitacion) }>
                                         <td>{area_hospital.Codigo_Habilitacion}</td>
                                         <td>{area_hospital.Id_Area}</td>
@@ -48,10 +54,16 @@ const CompShowAreaHospitales=()=>{
                                         </td>
                                 </tr>
                             ))}
-                        </tbody>
-                    </table>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>
+                                <Link to="/Areas_Hospitales/create" className='btn' id="Crear">Asignar Área</Link>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </div>    
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import Varia from '../resources/Variables.png'
 const URI='http://localhost:5500/Variables_Produccion/'
 
 const CompShowVariablesProduccion=()=>{
@@ -27,39 +27,48 @@ const CompShowVariablesProduccion=()=>{
 
     //DEVOLVER VISTA
     return(
-        <div className="container">
-            <div className="row">
-                <div className="col">
-                    <Link to='/Variables_Produccion/create' className="btn btn-primary mt-2 mb-2">Crear Variable Producción</Link>
-                    <table className="table table-striped">
-                        <thead className="table-primary">
-                            <tr>
-                                <th>Id Variable Producción</th>
-                                <th>Nombre Variable</th>
-                                <th>Tipo Variable</th>
-                                <th>Activa</th>
-                                <th>Variable Suma</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {Variables_Produccion.map((variableProduccion)=>(
-                                <tr key={variableProduccion.Id_Variable_Produccion}>
-                                    <td>{variableProduccion.Id_Variable_Produccion}</td>
-                                    <td>{variableProduccion.Nombre_Variable}</td>
-                                    <td>{variableProduccion.Tipo_Variable}</td>
-                                    <td>{variableProduccion.Activa}</td>
-                                    <td>{variableProduccion.Variable_Suma}</td>
-                                    <td>
-                                        <Link to={`/Variables_Produccion/edit/${variableProduccion.Id_Variable_Produccion}`} className='btn btn-primary'><i className="fa-solid fa-pen-to-square"></i></Link>
-                                        <button onClick={()=>deleteVariableProduccion(variableProduccion.Id_Variable_Produccion)} className='btn btn-danger'><i className="fa-regular fa-trash-can"></i></button>
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
+        <div className="container register mb-5">
+            <div className="row abs-center">
+                <div className="col-md-3 abs-center">
+                    <img src={Varia} className="btn" alt="Hospital" width={320}/>
                 </div>
-            </div>
+                <div className="col-md-9">
+                    <div className='container'>
+                        <div className='row abs-center'>
+                            <div className='col'>
+                                <table className="table table-responsive-lg table-bordered table-light  mt-3" >
+                                    <thead className='table table-primary'>
+                                        <tr>
+                                            <th>Id Variable Producción</th>
+                                            <th>Nombre Variable</th>
+                                            <th>Tipo Variable</th>
+                                            <th>Activa</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {Variables_Produccion.map((variableProduccion)=>(
+                                            <tr key={variableProduccion.Id_Variable_Produccion}>
+                                                <td>{variableProduccion.Id_Variable_Produccion}</td>
+                                                <td>{variableProduccion.Nombre_Variable}</td>
+                                                <td>{variableProduccion.Tipo_Variable}</td>
+                                                <td>{variableProduccion.Activa}</td>
+                                                <td>
+                                                    <Link to={`/Variables_Produccion/edit/${variableProduccion.Id_Variable_Produccion}`} className='btn btn-primary m-1'><i className="fa-solid fa-pen-to-square"></i></Link>
+                                                    <button onClick={()=>deleteVariableProduccion(variableProduccion.Id_Variable_Produccion)} className='btn btn-danger'><i className="fa-regular fa-trash-can"></i></button>
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>
+                                <Link to="/Variables_Produccion/create" className='btn' id="Crear">Crear Variable</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
         </div>
     )
 }

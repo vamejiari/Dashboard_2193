@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import Calendario from '../resources/Calendario.png'
 
 const URI='http://localhost:5500/Periodos/'
 
@@ -30,31 +31,47 @@ const CompEditPeriodo=()=>{
         setAnio(res.data.Anio)
     }
     return(
-        <div>
-            <h3>Editar Periodo</h3>
-            <form onSubmit={update}>
-                <div className="mt-2 mb-2">
-                    <label className="form-label">Mes</label>
-                    <input
-                        value={Mes}
-                        onChange={(e)=>setMes(e.target.value)}
-                        type="number"
-                        className="form-control"
-                    />
-                </div>
-                <div className="mt-2 mb-2">
-                    <label className="form-label">Año</label>
-                    <input
-                        value={Anio}
-                        onChange={(e)=>setAnio(e.target.value)}
-                        type="number"
-                        className="form-control"
-                    />
-                </div>
-                <button type="submit" className="btn btn-primary"><i className="fa-solid fa-pen-to-square"></i></button>
+        <form onSubmit={update} className="need-validation">
+            <div class="container register mb-5">
+                <div class="row">
+                    <div class="col-md-4 abs-center">
+                        <img src={Calendario} className="btn" alt="Mapa" width={300}/>
+                    </div>
+                    <div class="col-md-8 register-right">
+                        <div class="tab-content">
+                            <div >
+                                <h3 class="register-heading">Editar Periodo</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-5">
+                                        <label className="mb-2">Mes</label>
+                                        <input
+                                            value={Mes} 
+                                            onChange={(e)=>setMes(e.target.value)}
+                                            type="text"
+                                            className="form-control"
+                                            placeholder="Mes"
+                                        required/>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <label className="mb-2">Año</label>
+                                        <input
+                                            value={Anio} 
+                                            onChange={(e)=>setAnio(e.target.value)}
+                                            type="text"
+                                            className="form-control"
+                                            placeholder="Mes"
+                                        required/>
+                                    </div>
+                                </div>
+                                <button type="submit" className="btn mb-5" id='Agregar'>Editar</button>
+                                <Link to={'/Periodos'} className='btn btn-primary mb-5' id='Cancelar' >Cancelar</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </form>
 
-            </form>
-        </div>
     )
 }
 

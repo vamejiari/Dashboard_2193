@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Varia from '../resources/Variables.png'
 
 const URI='http://localhost:5500/Variables_Produccion/'
 
@@ -22,60 +23,78 @@ const CompCreateVariableProduccion=()=>{
     }
 
     return(
-        <div>
-            <h3>Crear Variable Produccion</h3>
-            <form onSubmit={store}>
-                <div className="mb-3">
-                    <label className="form-label">Id Variable</label>
-                    <input
-                        value={Id_Variable_Produccion}
-                        onChange={(e)=>setId_Variable_Produccion(e.target.value)}
-                        type="text"
-                        className="form-control"
-                    />
-                </div>
-                <div className="mb-3"> 
-                    <label className="form-label">Nombre</label>
-                    <input
-                        value={Nombre_Variable}
-                        onChange={(e)=>setNombre_Variable(e.target.value)}
-                        type="text"
-                        className="form-control"
-                    />
-                </div>
-                <div className="mb-3">
-                    <label className="form-label">Tipo Variable</label>
-                    <input
-                        value={Tipo_Variable}
-                        onChange={(e)=>setTipo_Variable(e.target.value)}
-                        type="text"
-                        className="form-control"
-                    />
-                </div>
-                <div className="mb-3">
-                    <label className="cbox2">Activa</label>
-                    <div>
-                        <input
-                            value={isChecked}
-                            type="checkbox" 
-                            onChange={(e)=>setActiva(e.target.value)}
-                            className="cbox2"
-                        />
-                    </div>    
-                </div>
-                <div className="mb-3">
-                    <label className="form-label">Variable Suma</label>
-                    <input
-                        value={Variable_Suma}
-                        onChange={(e)=>setVariable_Suma(e.target.value)}
-                        type="text"
-                        className="form-control"
-                    />
-                </div>
-               
-                <button type="submit" className="btn btn-success"><i className="fa-regular fa-square-plus"></i></button>
-            </form>
-        </div>
+        <form onSubmit={store} className="need-validation">
+            <div class="container register mb-5">
+                <div class="row">
+                    <div class="col-4 abs-center">
+                        <img src={Varia} className="btn" alt="Mapa" width={330}/>
+                    </div>
+                    <div class="col-md-8 register-right">
+                        <div class="tab-content mt-5">
+                            <div>
+                                <h3 class="register-heading">Crear Variable Produccion</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <label className="mb-2">Id Variable</label>
+                                        <input 
+                                            value={Id_Variable_Produccion}
+                                            onChange={(e)=>setId_Variable_Produccion(e.target.value)}
+                                            type="text" 
+                                            class="form-control" 
+                                            placeholder="Código Identificación" 
+                                        required/>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <label className="mb-2">Tipo Variable</label>
+                                        <input 
+                                            value={Tipo_Variable}
+                                            onChange={(e)=>setTipo_Variable(e.target.value)}
+                                            type="text" 
+                                            class="form-control" 
+                                            placeholder="Tipo" 
+                                        required/>
+                                    </div>
+                                    <div class="col-md-11 mt-3">
+                                        <label className="mb-2">Nombre</label>
+                                        <input 
+                                            value={Nombre_Variable}
+                                            onChange={(e)=>setNombre_Variable(e.target.value)}
+                                            type="text" 
+                                            class="form-control" 
+                                            placeholder="Nombre" 
+                                        required/>
+                                    </div>
+                                    
+                                    <div class="col-md-3 mt-3">
+                                        <label className="cbox2">Activa</label>
+                                        <div>
+                                            <input 
+                                                value={isChecked}
+                                                onChange={(e)=>setActiva(e.target.value)}
+                                                type="checkbox" 
+                                                class="cbox2" 
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 mt-3">
+                                        <label className="mb-2">Variable Suma</label>
+                                        <input 
+                                            value={Variable_Suma}
+                                            onChange={(e)=>setVariable_Suma(e.target.value)}
+                                            type="text" 
+                                            class="form-control" 
+                                            placeholder="Suma" 
+                                        required/>
+                                    </div>
+                                </div>
+                                <button type="submit" className="btn mb-5" id='Agregar'>Crear</button>
+                                <Link to={'/Variables_Produccion'} className='btn mb-5' id='Cancelar' >Cancelar</Link> 
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </form>
     )
 }
 

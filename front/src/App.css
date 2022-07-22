@@ -1,3 +1,142 @@
+.abs-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#Crear{
+  float: center;
+  border: black;
+  border-radius: 3rem;
+  padding: 2%;
+  background: #ffffff;
+  margin-left: 5%;
+  color: #05553e;;
+  font-weight: 600;
+  width: 40%;
+}
+#Agregar{
+  float: center;
+  border: black;
+  border-radius: 3rem;
+  padding: 2%;
+  background: #51c4a3;
+  margin-left: 5%;
+  color: #fff;
+  font-weight: 600;
+  width: 25%;
+}
+#Cancelar{
+  float: center;
+  border: black;
+  border-radius: 3rem;
+  padding: 2%;
+  background: #51c4a3;
+  margin-left: 5%;
+  color: #fff;
+  font-weight: 600;
+  width: 25%;
+}
+/*ESTILOS PARA DEPARTAMENTO*/
+.register{
+  background: -webkit-linear-gradient(left, #51c4a3,#00c6ff );
+  margin-top: 3%;
+  padding: 3%;
+}
+.register-left{
+  text-align: center;
+  color: #fff;
+  margin-top: 50%;
+}
+.register-left input{
+  border: none;
+  border-radius: 1.5rem;
+  padding: 2%;
+  width: 30%;
+  background: #f8f9fa;
+  font-weight: bold;
+  color: #000000;
+  margin-top: 70%;
+  margin-bottom: 0%;
+}
+.register-right{
+  text-align: center;
+  justify-content: center;
+  background: #f7f9fa;
+  border-top-left-radius: 10% 50%;
+  border-bottom-left-radius: 10% 50%;
+}
+.register-left img{
+  margin-top: 0%;
+  margin-bottom: 0%;
+  margin-left: -5%;  
+}
+
+.register .register-form{
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+  margin-right: -8%;
+  margin-top: 17%;
+  margin-bottom: -2%;
+}
+
+.register-heading{
+  text-align: center;
+  margin-left: 10%;
+  margin-top: 5%;
+  margin-bottom: -20%;
+  color: #000000;
+}
+
+
+
+#Tabla{
+  text-align: center;
+
+}
+
+/*Colores botones redes sociales*/
+#fb{
+  background-color: #3b5998;
+  color: #ffffff
+}
+
+#tw{
+  background-color: #55acee;
+  color: #ffffff
+}
+
+#ig{
+  background-color: #ac2bac;
+  color: #ffffff
+}
+
+#ln{
+  background-color: #0082ca;
+  color: #ffffff
+}
+
+#yt{
+  background-color: #ff0000;
+  color: #ffffff
+}
+
+/*Color texto*/
+#font{
+  color: #000000;
+}
+
+#bg-login{
+  background-color: #49a4f5;
+}
+
+#div-bg{
+  background-color: #51c4a3;
+  min-height: 10vh;
+}
+
 .App {
   text-align: center;
 }

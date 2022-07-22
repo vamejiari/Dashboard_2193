@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Mapa from "../resources/MapaColombia.png"
 
 const URI='http://localhost:5500/Departamentos/'
 
@@ -18,30 +19,47 @@ const CompCreateDepartamento=()=>{
     }
 
     return(
-        <div>
-            <h3>Crear Departamento</h3>
-            <form onSubmit={store}>
-                <div className="mb-3">
-                    <label className="form-label">Id Departamento</label>
-                    <input 
-                        value={Id_Departamento}
-                        onChange={(e)=>setId_Departamento(e.target.value)}
-                        type="text"
-                        className="form-control"
-                    />
-                </div>
-                <div className="mb-3">
-                    <label className="form-label">Nombre Departamento</label>
-                    <input 
-                        value={Nombre_Departamento}
-                        onChange={(e)=>setNombre_Departamento(e.target.value)}
-                        type="text"
-                        className="form-control"
-                    />
-                </div>
-                <button type="submit" className="btn btn-success"><i class="fa-regular fa-square-plus"></i></button>
-            </form>
-        </div>
+        <form onSubmit={store} className="need-validation">
+            <div class="container register mb-5">
+                <div class="row">
+                    <div class="col-3 abs-center">
+                        <img src={Mapa} className="btn" alt="Mapa" width={300}/>
+                    </div>
+                    <div class="col-md-9 register-right">
+                        <div class="tab-content">
+                            <div>
+                                <h3 class="register-heading">Crear Departamento</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-4">
+                                        <label className="mb-2">Id Departamento</label>
+                                        <input 
+                                            value={Id_Departamento}
+                                            onChange={(e)=>setId_Departamento(e.target.value)}
+                                            type="text" 
+                                            class="form-control" 
+                                            placeholder="Código Identificación" 
+                                        required/>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <label className="mb-2">Nombre Departamento</label>
+                                        <input 
+                                            value={Nombre_Departamento}
+                                            onChange={(e)=>setNombre_Departamento(e.target.value)}
+                                            type="text" 
+                                            class="form-control" 
+                                            placeholder="Nombre" 
+                                        required/>
+                                    </div>
+                                </div>
+                                <button type="submit" className="btn" id='Agregar'>Crear</button>
+                                <Link to={'/Departamentos'} className='btn' id='Cancelar' >Cancelar</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </form>
+        
     )
 }
 

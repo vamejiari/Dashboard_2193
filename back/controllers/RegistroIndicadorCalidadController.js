@@ -48,7 +48,7 @@ export const updateRegistroIndicadorCalidad=async(req,res)=>{
             where:{
                 Codigo_Habilitacion:req.params.Codigo_Habilitacion,
                 Id_Indicador:req.params.Id_Indicador,
-                Id_Periodo:req.params.Id_Indicador
+                Id_Periodo:req.params.Id_Periodo
             }
         })
         res.json({

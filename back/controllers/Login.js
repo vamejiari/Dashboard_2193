@@ -24,7 +24,7 @@ export const credenciales=async(req, res)=>{
                     })
                 }else{
                     console.log(bcrypt.compareSync(Contrasena, usuario.Contrasena))
-                    res.status(401).json({message: bcrypt.compareSync(Contrasena, usuario.Contrasena)})
+                    res.status(401).json({message: 'Contraseña Incorrecta'})
                 } 
             }
         })

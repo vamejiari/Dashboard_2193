@@ -45,9 +45,11 @@ export const createConsolidadoCalidad=async(req,res)=>{
 export const updateConsolidadoCalidad=async(req,res)=>{
     try {
         await ConsolidadoCalidadModel.update(req.body,{
-            Codigo_Habilitacion: req.params.Codigo_Habilitacion,
-            Id_Variable_Calidad: req.params.Id_Variable_Calidad,
-            Id_Vigencia: req.params.Id_Vigencia  
+            where:{
+                Codigo_Habilitacion: req.params.Codigo_Habilitacion,
+                Id_Variable_Calidad: req.params.Id_Variable_Calidad,
+                Id_Vigencia: req.params.Id_Vigencia
+            }  
         })
         res.json({
             "message":"Registro actualizado correctamente"
@@ -61,9 +63,11 @@ export const updateConsolidadoCalidad=async(req,res)=>{
 export const deleteConsolidadoCalidad=async(req,res)=>{
     try {
         await ConsolidadoCalidadModel.destroy({
-            Codigo_Habilitacion:req.params.Codigo_Habilitacion,
-            Id_Variable_Calidad:req.params.Id_Variable_Calidad,
-            Id_Vigencia:req.params.Id_Vigencia
+            where:{
+                Codigo_Habilitacion:req.params.Codigo_Habilitacion,
+                Id_Variable_Calidad:req.params.Id_Variable_Calidad,
+                Id_Vigencia:req.params.Id_Vigencia
+            }
         })
         res.json({
             "message":"Registro eliminado correctamente"

@@ -17,27 +17,33 @@ const Login=()=>{
 
     const onSubmit=async()=>{
         await axios.post(URI, {Usuario:Login.usuario, Contrasena:Login.contrasena})
-        //.catch(({response})=>{
-          //  console.log(response.data)
-        //})
-        navigate('/Hospitales')
+        .then(({data})=>{
+            if(data==="Valentina"){
+                navigate('/Hospitales')
+            }else{
+                navigate('/Usuarios')
+            }
+            
+        })
+        .catch(({response})=>{
+          console.log(response.data)
+        })
+        
         
     }
 
     return(
         <section className="vh-40 gradient-custom">
-            <div className="container py-1 h-60">
+            <div className="container py-4 h-60">
                 <div className="row d-flex justify-content-center align-items-center h-100">
                     <div className="col-11 col-md-8 col-lg-6 col-xl-5">
-                        <div className="card bg-success text-white">
-                            <div className="card-body p-5 text-center">
-
-                                <div className="mb-md-5 mt-md-4 pb-5">
-
+                        <div className="card text-black">
+                            <div className="card-body p-4 text-center" id='bg-login'>
+                                <div className="mb-md-2 mt-md-2 pb-1">
                                 <h2 className="fw-bold mb-2 text-uppercase">Ingresar</h2>
-                                <p className="text-white-50 mb-5">Por favor ingrese su usuario y contraseña</p>
+                                <p className="text-black mb-3">Por favor ingrese su usuario y contraseña</p>
 
-                                <div className="form-outline form-white mb-4">
+                                <div className="form-outline form-white mb-3">
                                     <input
                                         value={Login.usuario}
                                         onChange={inputChange} 
@@ -49,7 +55,7 @@ const Login=()=>{
                                     <label className="form-label">Usuario</label>
                                 </div>
 
-                                <div className="form-outline form-white mb-4">
+                                <div className="form-outline form-white mb-3">
                                 <input
                                         value={Login.contrasena}
                                         onChange={inputChange} 
@@ -58,10 +64,9 @@ const Login=()=>{
                                         className="form-control form-control-lg" 
                                         name='contrasena'
                                     />
-                                    <label className="form-label">Contraseña</label>
+                                    <label className="form-label mb-3">Contraseña</label>
                                 </div>
-
-                                <button className="btn btn-dark" type="submit" onClick={()=>onSubmit()}>Login</button>
+                                <button className="btn btn-dark md-3" type="submit" onClick={()=>onSubmit()}>Login</button>
 
                                 </div>
                             </div>

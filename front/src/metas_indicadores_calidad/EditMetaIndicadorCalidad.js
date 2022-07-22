@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import met from '../resources/Meta.png'
 
 const URI='http://localhost:5500/Metas_Indicadores_Calidad/'
 
@@ -30,30 +31,46 @@ const CompEditMetaIndicadorCalidad=()=>{
         setValor(res.data.Valor)
     }
     return(
-        <div>
-            <h3>Editar Área</h3>
-            <form onSubmit={update}>
-                <div className="mt-2 mb-2">
-                    <label className="form-label">Tipo Meta</label>
-                    <input
-                        value={Tipo_Meta}
-                        onChange={(e)=>setTipo_Meta(e.target.value)}
-                        type="text"
-                        className="form-control"
-                    />
-                </div>
-                <div className="mt-2 mb-2">
-                    <label className="form-label">Valor</label>
-                    <input
-                        value={Valor}
-                        onChange={(e)=>setValor(e.target.value)}
-                        type="number"
-                        className="form-control"
-                    />
-                </div>
-                <button type="submit" className="btn btn-primary"><i className="fa-solid fa-pen-to-square"></i></button>
-            </form>
-        </div>
+        <form onSubmit={update} className="need-validation">
+            <div class="container register mb-5">
+                <div class="row">
+                    <div class="col-md-4 abs-center">
+                        <img src={met} className="btn" alt="Mapa" width={300}/>
+                    </div>
+                    <div class="col-md-8 register-right">
+                        <div class="tab-content">
+                            <div >
+                                <h3 class="register-heading">Editar Meta Indicador Calidad</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-7">
+                                        <label className="mb-2">Tipo Meta</label>
+                                        <input
+                                            value={Tipo_Meta} 
+                                            onChange={(e)=>setTipo_Meta(e.target.value)}
+                                            type="text"
+                                            className="form-control"
+                                            placeholder="Tipo Meta"
+                                        required/>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label className="mb-2">Valor</label>
+                                        <input
+                                            value={Valor} 
+                                            onChange={(e)=>setValor(e.target.value)}
+                                            type="number"
+                                            className="form-control"
+                                            placeholder="Valor"
+                                        required/>
+                                    </div>
+                                </div>
+                                <button type="submit" className="btn mb-5" id='Agregar'>Editar</button>
+                                <Link to={'/Metas_Indicadores_Calidad'} className='btn btn-primary mb-5' id='Cancelar' >Cancelar</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </form>
     )
 }
 
