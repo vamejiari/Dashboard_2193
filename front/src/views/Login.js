@@ -18,12 +18,7 @@ const Login=()=>{
     const onSubmit=async()=>{
         await axios.post(URI, {Usuario:Login.usuario, Contrasena:Login.contrasena})
         .then(({data})=>{
-            if(data==="Valentina"){
-                navigate('/Hospitales')
-            }else{
-                navigate('/Usuarios')
-            }
-            
+            navigate('/Main')
         })
         .catch(({response})=>{
           console.log(response.data)
@@ -33,6 +28,7 @@ const Login=()=>{
     }
 
     return(
+        <div>
         <section className="vh-40 gradient-custom">
             <div className="container py-4 h-60">
                 <div className="row d-flex justify-content-center align-items-center h-100">
@@ -67,7 +63,6 @@ const Login=()=>{
                                     <label className="form-label mb-3">Contraseña</label>
                                 </div>
                                 <button className="btn btn-dark md-3" type="submit" onClick={()=>onSubmit()}>Login</button>
-
                                 </div>
                             </div>
                         </div>
@@ -75,6 +70,8 @@ const Login=()=>{
                 </div>
             </div>
         </section>
+        </div>
+        
 
         
     )

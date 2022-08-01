@@ -29,17 +29,17 @@ const CompEditRegistroCalidad=()=>{
     }
     return(
         <form onSubmit={update} className="need-validation">
-            <div class="container register mb-5">
-                <div class="row">
-                    <div class="col-md-4 abs-center">
+            <div className="container register mb-5">
+                <div className="row">
+                    <div className="col-md-4 abs-center">
                         <img src={Check} className="btn" alt="Mapa" width={300}/>
                     </div>
-                    <div class="col-md-8 register-right">
-                        <div class="tab-content">
+                    <div className="col-md-8 register-right">
+                        <div className="tab-content">
                             <div >
-                                <h3 class="register-heading">Editar Registro Calidad</h3>
-                                <div class="row register-form">
-                                    <div class="col-md-7">
+                                <h3 className="register-heading">Editar Registro Calidad</h3>
+                                <div className="row register-form">
+                                    <div className="col-md-7">
                                         <label className="mb-2">Cantidad</label>
                                         <input
                                             value={Cantidad} 

@@ -22,53 +22,53 @@ const CompCreateMetaIndicadorCalidad=()=>{
 
     return(
         <form onSubmit={store} className="need-validation">
-            <div class="container register mb-5">
-                <div class="row">
-                    <div class="col-4 abs-center">
+            <div className="container register mb-5">
+                <div className="row">
+                    <div className="col-4 abs-center">
                         <img src={met} className="btn" alt="Mapa" width={315}/>
                     </div>
-                    <div class="col-md-8 register-right">
-                        <div class="tab-content mt-5">
+                    <div className="col-md-8 register-right">
+                        <div className="tab-content mt-5">
                             <div>
-                                <h3 class="register-heading">Crear Meta Indicador Calidad</h3>
-                                <div class="row register-form">
-                                    <div class="col-md-4">
+                                <h3 className="register-heading">Crear Meta Indicador Calidad</h3>
+                                <div className="row register-form">
+                                    <div className="col-md-4">
                                         <label className="mb-2">Id Meta Indicador</label>
                                         <input 
                                             value={Id_Meta_Indicador}
                                             onChange={(e)=>setId_Meta_Indicador(e.target.value)}
                                             type="text" 
-                                            class="form-control" 
+                                            className="form-control" 
                                             placeholder="Código Identificación" 
                                         required/>
                                     </div>
-                                    <div class="col-md-7">
+                                    <div className="col-md-7">
                                         <label className="mb-2">Indicador</label>
                                         <input 
                                             value={Id_Indicador}
                                             onChange={(e)=>setId_Indicador(e.target.value)}
                                             type="text" 
-                                            class="form-control" 
+                                            className="form-control" 
                                             placeholder="Indicador" 
                                         required/>
                                     </div>
-                                    <div class="col-md-6 mt-3">
+                                    <div className="col-md-6 mt-3">
                                         <label className="mb-2">Tipo Meta</label>
                                         <input 
                                             value={Tipo_Meta}
                                             onChange={(e)=>setTipo_Meta(e.target.value)}
                                             type="text" 
-                                            class="form-control" 
+                                            className="form-control" 
                                             placeholder="Tipo" 
                                         required/>
                                     </div>
-                                    <div class="col-md-5 mt-3">
+                                    <div className="col-md-5 mt-3">
                                         <label className="mb-2">Valor Meta</label>
                                         <input 
                                             value={Valor}
                                             onChange={(e)=>setValor(e.target.value)}
                                             type="number" 
-                                            class="form-control" 
+                                            className="form-control" 
                                             placeholder="Valor" 
                                         required/>
                                     </div>

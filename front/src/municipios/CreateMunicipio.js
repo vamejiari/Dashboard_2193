@@ -23,43 +23,43 @@ const CompCreateMunicipio=()=>{
 
     return(
         <form onSubmit={store} className="need-validation">
-            <div class="container register mb-5">
-                <div class="row">
-                    <div class="col-md-4 abs-center">
+            <div className="container register mb-5">
+                <div className="row">
+                    <div className="col-md-4 abs-center">
                         <img src={Mapa} className="btn" alt="Mapa" width={390}/>
                     </div>
-                    <div class="col-md-8 register-right">
-                        <div class="tab-content">
+                    <div className="col-md-8 register-right">
+                        <div className="tab-content">
                             <div>
-                                <h3 class="register-heading">Crear Municipio</h3>
-                                <div class="row register-form">
-                                    <div class="col-md-4">
+                                <h3 className="register-heading">Crear Municipio</h3>
+                                <div className="row register-form">
+                                    <div className="col-md-4">
                                         <label className="mb-2">Id Municipio</label>
                                         <input 
                                             value={Id_Municipio}
                                             onChange={(e)=>setId_Municipio(e.target.value)}
                                             type="text" 
-                                            class="form-control" 
+                                            className="form-control" 
                                             placeholder="Código Identificación" 
                                         required/>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div className="col-md-4">
                                         <label className="mb-2">Departamento</label>
                                         <input 
                                             value={Id_Departamento}
                                             onChange={(e)=>setId_Departamento(e.target.value)}
                                             type="text" 
-                                            class="form-control" 
+                                            className="form-control" 
                                             placeholder="Departamento" 
                                         required/>
                                     </div>
-                                    <div class="col-md-7">
+                                    <div className="col-md-7">
                                         <label className="mt-3 mb-2">Nombre Municipio</label>
                                         <input 
                                             value={Nombre_Municipio}
                                             onChange={(e)=>setNombre_Municipio(e.target.value)}
                                             type="text" 
-                                            class="form-control" 
+                                            className="form-control" 
                                             placeholder="Nombre" 
                                         required/>
                                     </div>

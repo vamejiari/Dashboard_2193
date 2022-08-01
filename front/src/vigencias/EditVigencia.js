@@ -32,17 +32,17 @@ const CompEditVigencia=()=>{
 
     return(
         <form onSubmit={update} className="need-validation">
-            <div class="container register mb-5">
-                <div class="row">
-                    <div class="col-md-4 abs-center">
+            <div className="container register mb-5">
+                <div className="row">
+                    <div className="col-md-4 abs-center">
                         <img src={Calendario} className="btn" alt="Mapa" width={300}/>
                     </div>
-                    <div class="col-md-8 register-right">
-                        <div class="tab-content">
+                    <div className="col-md-8 register-right">
+                        <div className="tab-content">
                             <div >
-                                <h3 class="register-heading">Editar Vigencia</h3>
-                                <div class="row register-form">
-                                    <div class="col-md-5">
+                                <h3 className="register-heading">Editar Vigencia</h3>
+                                <div className="row register-form">
+                                    <div className="col-md-5">
                                         <label className="mb-2">Trimestre</label>
                                         <input
                                             value={Trimestre} 
@@ -52,7 +52,7 @@ const CompEditVigencia=()=>{
                                             placeholder="Trimestre"
                                         required/>
                                     </div>
-                                    <div class="col-md-5">
+                                    <div className="col-md-5">
                                         <label className="mb-2">Año</label>
                                         <input
                                             value={Anio} 

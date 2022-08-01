@@ -99,12 +99,24 @@ import CompShowConsolidadosProduccion from './consolidados_produccion/ShowConsol
 import CompCreateConsolidadoProduccion from './consolidados_produccion/CreateConsolidadoProduccion';
 import CompEditConsolidadoProduccion from './consolidados_produccion/EditConsolidadoProduccion';
 import Login from './views/Login';
+import Main from './views/Main';
+
 
 function App() {
   return (
     <div className="App">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <div className="container-fluid" id='Head'>
+                    <a className="navbar-brand" href="/">SICAPH</a>
+                    <a className="navbar-brand" href="/Main">Menú Principal</a>
+                    <span className="navbar-text text-dark justify-content-center">
+                        Bienvenidos al Sistema de Indicadores de Calidad y Producción Hospitalaria
+                    </span>
+                </div>
+            </nav>
       <BrowserRouter>
         <Routes>
+          <Route path='/Main' element={<Main/>}/>
           {/* CADA RUTA QUE SE UTILIZARA CUANDO SE DEFINA EL ENRUTADOR */}
           {/* Rutas departamento */}
           <Route path="/Departamentos" element={<CompShowDepartamentos />} />
@@ -203,7 +215,7 @@ function App() {
           <Route path="/Consolidados_Produccion/create" element={<CompCreateConsolidadoProduccion />} />
           <Route path="/Consolidados_Produccion/edit/:Codigo_Habilitacion/:Id_Variable_Produccion/:Id_Vigencia" element={<CompEditConsolidadoProduccion />} />
 
-          <Route path="/Login" element={<Login />} />
+          <Route path="/" element={<Login />} />
 
         </Routes>
       </BrowserRouter>
@@ -221,7 +233,7 @@ function App() {
             <div className="text-center p-0 pb-2">
               © Desarrollado por:
               <div>
-                <a className="text-dark" href="https://asgestion.com.co/">Asgestión S.A.S</a>
+                <a className="text-dark" href="https://asgestion.com.co/">Asgestión</a>
               </div>
               2022
             </div>

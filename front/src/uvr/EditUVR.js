@@ -28,17 +28,17 @@ const CompEditUVR=()=>{
     }
     return(
         <form onSubmit={update} className="need-validation">
-            <div class="container register mb-5">
-                <div class="row">
-                    <div class="col-md-3 abs-center">
+            <div className="container register mb-5">
+                <div className="row">
+                    <div className="col-md-3 abs-center">
                         <img src={imagen} className="btn" alt="Mapa" width={310}/>
                     </div>
-                    <div class="col-md-9 register-right">
-                        <div class="tab-content">
+                    <div className="col-md-9 register-right">
+                        <div className="tab-content">
                             <div >
-                                <h3 class="register-heading">Editar UVR</h3>
-                                <div class="row register-form">
-                                    <div class="col-md-7">
+                                <h3 className="register-heading">Editar UVR</h3>
+                                <div className="row register-form">
+                                    <div className="col-md-7">
                                         <label className="mb-2">Ponderado</label>
                                         <input
                                             value={Ponderado}

@@ -28,12 +28,12 @@ const CompShowUVR=()=>{
 
     //Retornar vistas
     return(
-        <div class="container register mb-5">
-            <div class="row abs-center">
-                <div class="col-md-3 abs-center">
+        <div className="container register mb-5">
+            <div className="row abs-center">
+                <div className="col-md-3 abs-center">
                     <img src={imagen} className="btn" alt="Mapa" width={250}/>
                 </div>
-                <div class="col-md-9">
+                <div className="col-md-9">
                     <div className='container'>
                         <div className='row abs-center'>
                             <div className='col'>

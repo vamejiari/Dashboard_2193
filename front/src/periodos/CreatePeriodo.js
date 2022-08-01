@@ -21,53 +21,53 @@ const CompCreatePeriodo=()=>{
     }
     return(
         <form onSubmit={store} className="need-validation">
-            <div class="container register mb-5">
-                <div class="row">
-                    <div class="col-4 abs-center">
+            <div className="container register mb-5">
+                <div className="row">
+                    <div className="col-4 abs-center">
                         <img src={Calendario} className="btn" alt="Mapa" width={315}/>
                     </div>
-                    <div class="col-md-8 register-right">
-                        <div class="tab-content mt-5">
+                    <div className="col-md-8 register-right">
+                        <div className="tab-content mt-5">
                             <div>
-                                <h3 class="register-heading">Crear Periodo</h3>
-                                <div class="row register-form">
-                                    <div class="col-md-8">
+                                <h3 className="register-heading">Crear Periodo</h3>
+                                <div className="row register-form">
+                                    <div className="col-md-8">
                                         <label className="mb-2">Id Periodo</label>
                                         <input 
                                             value={Id_Periodo}
                                             onChange={(e)=>setId_Periodo(e.target.value)}
                                             type="text" 
-                                            class="form-control" 
+                                            className="form-control" 
                                             placeholder="Código Identificación" 
                                         required/>
                                     </div>
-                                    <div class="col-md-5 mt-3">
+                                    <div className="col-md-5 mt-3">
                                         <label className="mb-2">Mes</label>
                                         <input 
                                             value={Mes}
                                             onChange={(e)=>setMes(e.target.value)}
                                             type="text" 
-                                            class="form-control" 
+                                            className="form-control" 
                                             placeholder="Mes" 
                                         required/>
                                     </div>
-                                    <div class="col-md-5 mt-3">
+                                    <div className="col-md-5 mt-3">
                                         <label className="mb-2">Año</label>
                                         <input 
                                             value={Anio}
                                             onChange={(e)=>setAnio(e.target.value)}
                                             type="text" 
-                                            class="form-control" 
+                                            className="form-control" 
                                             placeholder="Año" 
                                         required/>
                                     </div>
-                                    <div class="col-md-8 mt-3">
+                                    <div className="col-md-8 mt-3">
                                         <label className="mb-2">Vigencia</label>
                                         <input 
                                             value={Id_Vigencia}
                                             onChange={(e)=>setId_Vigencia(e.target.value)}
                                             type="text" 
-                                            class="form-control" 
+                                            className="form-control" 
                                             placeholder="Vigencia" 
                                         />
                                     </div>

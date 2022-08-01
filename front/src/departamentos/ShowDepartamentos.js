@@ -28,12 +28,12 @@ import {useState, useEffect} from 'react'
 
     //DEVOLVER VISTA
     return (
-        <div class="container register mb-5">
-            <div class="row">
-                <div class="col-md-3 abs-center">
+        <div className="container register mb-5">
+            <div className="row">
+                <div className="col-md-3 abs-center">
                     <img src={Mapa} className="btn" alt="Mapa" width={360}/>
                 </div>
-                <div class="col-md-9">
+                <div className="col-md-9">
                     <div className='container'>
                         <div className='row'>
                             <div className='col'>

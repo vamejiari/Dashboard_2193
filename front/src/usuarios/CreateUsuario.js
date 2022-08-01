@@ -26,93 +26,93 @@ const CompCreateUsuario=()=>{
 
     return(
         <form onSubmit={store} className="need-validation">
-            <div class="container register mb-5">
-                <div class="row">
-                    <div class="col-4 abs-center">
+            <div className="container register mb-5">
+                <div className="row">
+                    <div className="col-4 abs-center">
                         <img src={Usua} className="btn" alt="Mapa" width={330}/>
                     </div>
-                    <div class="col-md-8 register-right">
-                        <div class="tab-content mt-5">
+                    <div className="col-md-8 register-right">
+                        <div className="tab-content mt-5">
                             <div>
-                                <h3 class="register-heading">Crear Usuario</h3>
-                                <div class="row register-form">
-                                    <div class="col-md-6">
+                                <h3 className="register-heading">Crear Usuario</h3>
+                                <div className="row register-form">
+                                    <div className="col-md-6">
                                         <label className="mb-2">Cédula</label>
                                         <input 
                                             value={Cedula}
                                             onChange={(e)=>setCedula(e.target.value)}
                                             type="text" 
-                                            class="form-control" 
+                                            className="form-control" 
                                             placeholder="Cedula" 
                                         required/>
                                     </div>
-                                    <div class="col-md-5">
+                                    <div className="col-md-5">
                                         <label className="mb-2">Tipo Usuario</label>
                                         <input 
                                             value={Tipo_Usuario}
                                             onChange={(e)=>setTipo_Usuario(e.target.value)}
                                             type="text" 
-                                            class="form-control" 
+                                            className="form-control" 
                                             placeholder="Tipo Usuario" 
                                         required/>
                                     </div>
-                                    <div class="col-md-11">
+                                    <div className="col-md-11">
                                         <label className="mb-2">Nombre</label>
                                         <input 
                                             value={Nombre}
                                             onChange={(e)=>setNombre(e.target.value)}
                                             type="text" 
-                                            class="form-control" 
+                                            className="form-control" 
                                             placeholder="Nombre" 
                                         required/>
                                     </div>
-                                    <div class="col-md-11 mt-3">
+                                    <div className="col-md-11 mt-3">
                                         <label className="mb-2">Apellidos</label>
                                         <input 
                                             value={Apellidos}
                                             onChange={(e)=>setApellidos(e.target.value)}
                                             type="text" 
-                                            class="form-control" 
+                                            className="form-control" 
                                             placeholder="Apellidos" 
                                         required/>
                                     </div>
-                                    <div class="col-md-5 mt-3">
+                                    <div className="col-md-5 mt-3">
                                         <label className="mb-2">Usuario</label>
                                         <input 
                                             value={Usuario}
                                             onChange={(e)=>setUsuario(e.target.value)}
                                             type="text" 
-                                            class="form-control" 
+                                            className="form-control" 
                                             placeholder="Usuario" 
                                         required/>
                                     </div>
-                                    <div class="col-md-6 mt-3">
+                                    <div className="col-md-6 mt-3">
                                         <label className="mb-2">Contraseña</label>
                                         <input 
                                             value={Contrasena}
                                             onChange={(e)=>setContrasena(e.target.value)}
                                             type="text" 
-                                            class="form-control" 
+                                            className="form-control" 
                                             placeholder="Contraseña" 
                                         required/>
                                     </div>
-                                    <div class="col-md-5 mt-3">
+                                    <div className="col-md-5 mt-3">
                                         <label className="mb-2">Código Habilitación</label>
                                         <input 
                                             value={Codigo_Habilitacion}
                                             onChange={(e)=>setCodigo_Habilitacion(e.target.value)}
                                             type="text" 
-                                            class="form-control" 
+                                            className="form-control" 
                                             placeholder="Hospital" 
                                         required/>
                                     </div>
-                                    <div class="col-md-6 mt-3">
+                                    <div className="col-md-6 mt-3">
                                         <label className="mb-2">Área</label>
                                         <input 
                                             value={Id_Area}
                                             onChange={(e)=>setId_Area(e.target.value)}
                                             type="text" 
-                                            class="form-control" 
+                                            className="form-control" 
                                             placeholder="Área" 
                                         required/>
                                     </div>

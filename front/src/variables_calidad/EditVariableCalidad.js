@@ -35,17 +35,17 @@ const CompEditVariableCalidad=()=>{
 
     return(
         <form onSubmit={update} className="need-validation">
-            <div class="container register mb-5">
-                <div class="row">
-                    <div class="col-4 abs-center">
+            <div className="container register mb-5">
+                <div className="row">
+                    <div className="col-4 abs-center">
                         <img src={Varia} className="btn" alt="Mapa" width={330}/>
                     </div>
-                    <div class="col-md-8 register-right">
-                        <div class="tab-content">
+                    <div className="col-md-8 register-right">
+                        <div className="tab-content">
                             <div >
-                                <h3 class="register-heading">Editar Variable Calidad</h3>
-                                <div class="row register-form">
-                                    <div class="col-md-7">
+                                <h3 className="register-heading">Editar Variable Calidad</h3>
+                                <div className="row register-form">
+                                    <div className="col-md-7">
                                         <label className="mb-2">Nombre</label>
                                         <input
                                             value={Nombre_Variable} 
@@ -55,17 +55,17 @@ const CompEditVariableCalidad=()=>{
                                             placeholder="Nombre"
                                         required/>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div className="col-md-4">
                                         <label className="mb-2">Tipo Variable</label>
                                         <input 
                                             value={Tipo_Valor}
                                             onChange={(e)=>setTipo_Valor(e.target.value)}
                                             type="text" 
-                                            class="form-control" 
+                                            className="form-control" 
                                             placeholder="Tipo" 
                                         required/>
                                     </div>
-                                    <div class="col-md-4 mt-3">
+                                    <div className="col-md-4 mt-3">
                                         <label className="mb-2">Activa</label>
                                         <div>
                                             <input
