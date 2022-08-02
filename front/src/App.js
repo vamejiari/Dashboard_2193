@@ -106,14 +106,14 @@ function App() {
   return (
     <div className="App">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <div className="container-fluid" id='Head'>
-                    <a className="navbar-brand" href="/">SICAPH</a>
-                    <a className="navbar-brand" href="/Main">Menú Principal</a>
-                    <span className="navbar-text text-dark justify-content-center">
-                        Bienvenidos al Sistema de Indicadores de Calidad y Producción Hospitalaria
-                    </span>
-                </div>
-            </nav>
+        <div className="container-fluid" id='Head'>
+          <a className="navbar-brand" href="/">SICAPH</a>
+          <a className="navbar-brand" href="/Main">Menú Principal</a>
+          <span className="navbar-text text-dark justify-content-center">
+            Bienvenidos al Sistema de Indicadores de Calidad y Producción Hospitalaria
+          </span>
+        </div>
+      </nav>
       <BrowserRouter>
         <Routes>
           <Route path='/Main' element={<Main/>}/>
@@ -221,7 +221,7 @@ function App() {
       </BrowserRouter>
       <footer className= "text-center text-dark">
         <div id="div-bg">
-          <div className="container p-4 pb-4 col-lg-3 col-md-2 mb-3 mb-md-0">
+          <div className="container p-4 pb-4 mb-md-0">
             <img src={logo2} className="btn" alt="Logo" width="300" href="https://asgestion.com.co/" />
             <section className="p-2 mb-1">
               <a className="btn btn-floating m-1" id='fb' href="https://www.facebook.com/AsgestionSalud/" role="button"><i className="fa-brands fa-facebook-f"></i></a>

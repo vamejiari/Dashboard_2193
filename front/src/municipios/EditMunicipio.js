@@ -10,7 +10,7 @@ const URI2='http://localhost:5500/Departamentos/'
 const CompEditMunicipio=()=>{
     const [Nombre_Municipio, setNombre_Municipio]=useState('')
     const [Id_Departamento, setId_Departamento]=useState('')
-    
+    const [Nombre_Departamento, setNombre_Departamento]=useState('')
     const navigate=useNavigate()
     const {Id_Municipio}=useParams()
 
@@ -30,9 +30,13 @@ const CompEditMunicipio=()=>{
 
     const getMunicipioById=async()=>{
         const res=await axios.get(URI+Id_Municipio)
+        //console.log(res.data)
         setNombre_Municipio(res.data.Nombre_Municipio)
         setId_Departamento(res.data.Id_Departamento)
+        const res2=await axios.get(URI2+res.data.Id_Departamento)
+        setNombre_Departamento(res2.data.Nombre_Departamento)
     }
+    
 
     return(
         <form onSubmit={update} className="need-validation">
@@ -59,8 +63,8 @@ const CompEditMunicipio=()=>{
                                     <div className="col-md-4">
                                         <label className="mb-2">Departamento</label>
                                         <input
-                                            value={Id_Departamento} 
-                                            onChange={(e)=>setId_Departamento(e.target.value)}
+                                            value={Nombre_Departamento} 
+                                            onChange={(e)=>setNombre_Departamento(e.target.value)}
                                             type="text"
                                             className="form-control"
                                             placeholder="Departamento"
