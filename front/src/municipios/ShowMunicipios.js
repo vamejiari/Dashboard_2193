@@ -4,18 +4,12 @@ import { Link } from "react-router-dom";
 import Mapa from "../resources/MapaColombia.png"
 
 const URI='http://localhost:5500/Municipios/'
-
 const CompShowMunicipios=()=>{
     //CONFIGURACION DE HOOKS
     const [Municipios, setMunicipios]=useState([])
-    const [Departamentos, setDepartamentos]=useState([])
 
     useEffect(()=>{
         getMunicipios()
-    },[])
-
-    useEffect(()=>{
-        getDepartamento()
     },[])
 
     //PROCEDIMIENTO PARA MOSTRAR TODOS LOS MUNICIPIOS
@@ -30,10 +24,6 @@ const CompShowMunicipios=()=>{
         //CREAR PETICION CON AXIOS
         await axios.delete(`${URI}${Id_Municipio}`)
         getMunicipios()
-    }
-
-    const getDepartamento=async()=>{
-        
     }
 
 
@@ -60,7 +50,7 @@ const CompShowMunicipios=()=>{
                                         {Municipios.map((municipio)=>(
                                             <tr key={municipio.Id_Municipio}>
                                                 <td>{municipio.Nombre_Municipio}</td>
-                                                <td>{municipio.Id_Departamento}</td>
+                                                <td>{municipio.Id_Departamento}</td>   
                                                 <td>
                                                     <Link to={`/Municipios/edit/${municipio.Id_Municipio}`} className='btn btn-info m-1'><i className="fa-solid fa-pen-to-square"></i></Link>
                                                     <button onClick={()=>deleteMunicipio(municipio.Id_Municipio)} className='btn btn-danger'><i className="fa-regular fa-trash-can"></i></button>

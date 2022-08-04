@@ -35,6 +35,8 @@ const ComEditVariableProduccion=()=>{
         setTipo_Variable(res.data.Tipo_Variable)
         setActiva(res.data.Activa)
         setVariable_Suma(res.data.Variable_Suma)
+        const res2=await axios.get(URI+Id_Variable_Produccion)
+        console.log(res2.data)
     }
     return(
         <form onSubmit={update} className="need-validation">

@@ -4,6 +4,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import Usuari from '../resources/Usuario.png'
 
 const URI='http://localhost:5500/Usuarios/'
+const URI2='http://localhost:5500/Areas/'
 
 const CompEditUsuario=()=>{
     const [Nombre, setNombre]=useState('')
@@ -12,6 +13,7 @@ const CompEditUsuario=()=>{
     const [Usuario, setUsuario]=useState('')
     const [Contrasena, setContrasena]=useState('')
     const [Id_Area, setId_Area]=useState('')
+    const [Nombre_Area, setNombre_Area]=useState('')
     const navigate=useNavigate()
     const {Cedula}=useParams()
 
@@ -40,6 +42,8 @@ const CompEditUsuario=()=>{
         setUsuario(res.data.Usuario)
         setContrasena(res.data.Contrasena)
         setId_Area(res.data.Id_Area)
+        const res2=await axios.get(URI2+res.data.Id_Area)
+        setNombre_Area(res2.data.Nombre_Area)
     }
 
     return(
@@ -97,8 +101,8 @@ const CompEditUsuario=()=>{
                                     <div className="col-md-3 mt-3">
                                         <label className="mb-2">Área</label>
                                         <input 
-                                            value={Id_Area}
-                                            onChange={(e)=>setId_Area(e.target.value)}
+                                            value={Nombre_Area}
+                                            onChange={(e)=>setNombre_Area(e.target.value)}
                                             type="text" 
                                             className="form-control" 
                                             placeholder="Usuario" 
